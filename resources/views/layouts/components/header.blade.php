@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>IIT - JU</title>
+    <title>Enterprise Competitiveness Institute</title>
     <script src="{{ asset('public/admin_assets/js/jquery.min.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('admin_assets/css/font-awesome.min.css')}}">
 	<link rel="stylesheet" href="{{ asset('frontend_assets/css/bootstrap.min.css') }}">

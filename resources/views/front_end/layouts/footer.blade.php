@@ -11,12 +11,20 @@
                                     <p>
                                         Are you looking for professional advice for your new business. Are you looking for professional advice for your new business. Are you looking for professional advice for your new business.
                                     </p>
-                                    <div class="subs-feilds">
-                                        <div class="suscribe-input">
-                                            <input type="email" class="email form-control width-80" id="sus_email" placeholder="Type Email">
-                                            <button type="submit" id="sus_submit" class="add-btn">Subscribe</button>
+                                    @if(session()->get('success'))
+                                        <div class="alert alert-success">
+                                        {{ session()->get('success') }}  
+                                        </div><br />
+                                    @endif
+                                    <form action="{{route('subscriber.store')}}" method="POST">
+                                    @csrf
+                                        <div class="subs-feilds">
+                                            <div class="suscribe-input">
+                                                <input type="email" name="email" class="email form-control width-80" id="email" placeholder="Type Email">
+                                                <button type="submit" id="sus_submit" class="add-btn">Subscribe</button>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>

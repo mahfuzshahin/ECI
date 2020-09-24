@@ -27,3 +27,17 @@ Route::get('/admin/login', 'AdminAuth\AdminLoginController@ShowLoginForm')->name
 Route::post('/admin/login', 'AdminAuth\AdminLoginController@LoginActive')->name('admin.login.submit');
 Route::get('/admin', 'AdminController@index')->name('admin.dashboard');
 Route::post('/admin/change-password', 'ChangePasswordController@ChangeAdminPassword')->name('admin.password.change');
+
+Route::get('/forum','ForumController@index');
+Route::post('/forum','ForumController@store')->name('forum.store');
+Route::get('/forum/post','ForumController@post');
+Route::get('/forum/post/{id}','ForumController@post_details');
+
+// Data
+Route::get('/about','DataController@about');
+
+//Scriber
+Route::post('/','SubscriberController@store')->name('subscriber.store');
+// Contacts
+Route::post('/welcome','ContactController@store');
+//Route::post('/',['video-like' , 'uses' => 'ContactController@store'] );

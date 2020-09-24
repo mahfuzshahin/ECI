@@ -58,6 +58,7 @@
 
 <!-- jQuery 3 -->
 <script src="{{ asset('admin_assets/js/jquery.min.js')}}"></script>
+<script src="{{ asset('admin_assets/js/jquery.min.js')}}"></script>
 <!-- Bootstrap 3.3.7 -->
 <script src="{{ asset('admin_assets/js/bootstrap.min.js')}}"></script>
 <!-- SlimScroll -->
@@ -66,7 +67,10 @@
 <script src="{{ asset('admin_assets/js/fastclick.js')}}"></script>
 <!-- w3zones App -->
 <!-- DataTables -->
-<script src="{{ asset('admin_assets/js/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{ asset('admin_assets/ckeditor/ckeditor.js')}}"></script>
+<script>
+CKEDITOR.replace( 'post_description' );
+</script>
 <script src="{{ asset('admin_assets/js/datatables/dataTables.bootstrap.min.js')}}"></script>
 <script src="{{ asset('admin_assets/js/datatables/dataTables.buttons.min.js')}}"></script>
 <script src="{{ asset('admin_assets/js/datatables/buttons.flash.min.js')}}"></script>

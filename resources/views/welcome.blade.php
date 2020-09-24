@@ -3,7 +3,7 @@
         <!-- Start Intro Area -->
         <div class="intro-area">
             <div class="bg-wrapper">
-            	<img src="front_end/img/background/bg.jpg" alt="">
+            	<img src="front_end/img/background/bg-header1.jpg" alt="">
             </div>
 			<div class="intro-content">
 				<div class="slider-content">
@@ -12,7 +12,7 @@
 							<div class="col-md-12">
 								<!-- layer 1 -->
 								<div class="layer-1 wow fadeInUp" data-wow-delay="0.3s">
-                                    <span class="title1">It Solutions . Services Company</span>
+                                    <span class="title1">Building Nations Company</span>
                                     <h2 class="title2">Transforming into <span class="color">digital software </span>company.</h2>
 								</div>
 								<!-- layer 2 -->
@@ -435,17 +435,18 @@
                             </div>
                             <div class="col-md-7 col-sm-8 col-xs-12">
                                 <div class="row">
-                                    <form id="contactForm" method="POST" action="contact.php" class="contact-form">
+                                    <form id="contactForm" method="POST" action="{{url('ContactController@store')}}" class="contact-form">
+                                    @csrf
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <input type="text" id="name" class="form-control" placeholder="Name" required data-error="Please enter your name">
+                                            <input type="text" id="name" name="name" class="form-control" placeholder="Name" required data-error="Please enter your name">
                                             <div class="help-block with-errors"></div>
-                                            <input type="email" class="email form-control" id="email" placeholder="Email" required data-error="Please enter your email">
+                                            <input type="email" name="email" class="email form-control" id="email" placeholder="Email" required data-error="Please enter your email">
                                             <div class="help-block with-errors"></div>
-                                            <input type="text" id="msg_subject" class="form-control last-part" placeholder="Subject" required data-error="Please enter your message subject">
+                                            <input type="text" name="subject" id="msg_subject" class="form-control last-part" placeholder="Subject" required data-error="Please enter your message subject">
                                             <div class="help-block with-errors last-part"></div>
                                         </div>
                                         <div class="col-md-6 col-sm-6 col-xs-12">
-                                            <textarea id="message" rows="7" placeholder="Massage" class="form-control" required data-error="Write your message"></textarea>
+                                            <textarea id="message" name="message" rows="7" placeholder="Massage" class="form-control" required data-error="Write your message"></textarea>
                                             <div class="help-block with-errors"></div>
                                             <button type="submit" id="submit" class="quote-btn">Submit</button>
                                             <div id="msgSubmit" class="h3 text-center hidden"></div> 
