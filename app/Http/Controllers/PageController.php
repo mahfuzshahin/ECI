@@ -3,30 +3,24 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
-class DataController extends Controller
+use App\Page;
+
+class PageController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth:admin');
+    }
     public function index()
     {
         //
-    }
-    public function about(){
-        return view('page.about');
-    }
-    public function team(){
-        return view('page.team');
-    }
-    public function single_window(){
-        return view('page.single_window');
-    }
-    public function agriculturul_development(){
-        $posts = Post::where('page_id',1)->where('category_id',1)->get();
-        return view('single_window.agriculturul_development',compact('posts'));
+        $pages = Page::all();
+        return view('admin.page.index',compact('pages'));
     }
 
     /**
@@ -48,6 +42,9 @@ class DataController extends Controller
     public function store(Request $request)
     {
         //
+        $pages = Page::create($request->all());
+        return redirect('/admin/page')->with('success', 'Successflully added');
+
     }
 
     /**

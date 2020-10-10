@@ -26,15 +26,27 @@
         <li class="treeview">
               <a href="#">
                 <i class="fa fa-graduation-cap"></i>
-                <span>Applications</span>
+                <span>Menu Management</span>
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-long-arrow-right"></i>PhD Application</a></li>
-                <li><a href="#"><i class="fa fa-long-arrow-right"></i>Mphil Application</a></li>
+                <li><a href="{{url('admin/page')}}"><i class="fa fa-long-arrow-right"></i> Page</a></li>
+                <li><a href="{{url('admin/category')}}"><i class="fa fa-long-arrow-right"></i> Category</a></li>
               </ul>
+        </li>
+        <li class="treeview">
+            <a href="#">
+                <i class="fa fa-gift"></i>
+                <span>Posts</span>
+                <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu">
+                <li><a href="{{url('admin/post')}}"><i class="fa fa-long-arrow-right"></i> Create Post</a></li>
+            </ul>
         </li>
 
         <!-- <li class="treeview">

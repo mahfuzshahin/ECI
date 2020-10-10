@@ -18,10 +18,10 @@
             <h4>                         
                 <a href="" class="btn btn-primary">Back</a>
             </h4>
-            @if(session()->has('FlsMsg'))
+            @if(session()->has('success'))
                 <div class="alert  alert-success alert-dismissible"> 
                     <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    {!! session('FlsMsg') !!}
+                    {!! session('success') !!}
                 </div>
             @endif
             <!-- Custom Tabs -->

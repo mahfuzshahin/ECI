@@ -16,6 +16,7 @@ class ContactController extends Controller
     public function index()
     {
         //
+        return view('page.contact');
     }
 
     /**
@@ -23,10 +24,7 @@ class ContactController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+
 
     /**
      * Store a newly created resource in storage.
@@ -34,14 +32,14 @@ class ContactController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function create(Request $request)
     {
         //
         $contact = new Contact([
             'name'=>$request->get('name'),
             'email'=>$request->get('email'),
             'subject'=>$request->get('subject'),
-            'message'=>$request->get('message'),
+            'message'=>$request->get('message')
         ]);
         $contact->save();
         return redirect('/')->with('success','Thanks for Contact With Us');

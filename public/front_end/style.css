@@ -156,6 +156,9 @@ input:focus, textarea:focus, select:focus {
 .bg-color-2{
     background:#0F2350;
 }
+.partner{
+    background:#CCD9EC;
+}
 .browserupgrade {
     margin: 0.2em 0;
     background: #ccc;
@@ -163,7 +166,7 @@ input:focus, textarea:focus, select:focus {
     padding: 0.2em 0;
 }
 .area-padding{
-	padding: 110px 0px;
+	padding: 5px 0px;
 }
 .area-padding-2{
     padding: 110px 0px 80px;
@@ -743,12 +746,15 @@ input:focus, textarea:focus, select:focus {
 /*----------------------------------------*/
 /*  5. About area
 /*----------------------------------------*/
-.about-2 {
+/* .about-2 {
     background: url(img/background/ag1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
     background-attachment: scroll;
+} */
+.about-2 {
+    background: #062241;
 }
 .about-content {
     background: #062241;

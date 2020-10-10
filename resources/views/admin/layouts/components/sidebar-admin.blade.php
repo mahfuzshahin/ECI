@@ -32,8 +32,8 @@
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="{{url('admin/submitted-mphil-application')}}"><i class="fa fa-long-arrow-right"></i>MPhil Application</a></li>
-                <li><a href="{{url('admin/submitted-phd-application')}}"><i class="fa fa-long-arrow-right"></i>PhD Application</a></li>
+                <li><a href="{{url('admin/submitted-mphil-application')}}"><i class="fa fa-long-arrow-right"></i> Application</a></li>
+                <li><a href="{{url('admin/submitted-phd-application')}}"><i class="fa fa-long-arrow-right"></i> Application</a></li>
               </ul>
         </li>
         
@@ -175,8 +175,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-long-arrow-right"></i> Ph.d Result</a></li>
-            <li><a href="#"><i class="fa fa-long-arrow-right"></i> Mphil Result</a></li>
+            <li><a href="#"><i class="fa fa-long-arrow-right"></i> Applicaton</a></li>
+            <li><a href="#"><i class="fa fa-long-arrow-right"></i> Applicaton</a></li>
           </ul>
         </li> --}}
 

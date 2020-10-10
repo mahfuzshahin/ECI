@@ -4,10 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Forum extends Model
+class Page extends Model
 {
     //
+
     protected $fillable = [
-        'title','post_description','status','feature_image'
+        'page_name','description','status'
     ];
 }

@@ -13,25 +13,25 @@
 		<!-- all css here -->
 
 		<!-- bootstrap v3.3.6 css -->
-		<link rel="stylesheet" href="front_end/css/bootstrap.min.css">
+		<link rel="stylesheet" href="{{asset('front_end/css/bootstrap.min.css')}}">
 		<!-- owl.carousel css -->
-		<link rel="stylesheet" href="front_end/css/owl.carousel.css">
-		<link rel="stylesheet" href="front_end/css/owl.transitions.css">
+		<link rel="stylesheet" href="{{asset('front_end/css/owl.carousel.css')}}">
+		<link rel="stylesheet" href="{{asset('front_end/css/owl.transitions.css')}}">
        <!-- Animate css -->
-        <link rel="stylesheet" href="front_end/css/animate.css">
+        <link rel="stylesheet" href="{{asset('front_end/css/animate.css')}}">
         <!-- meanmenu css -->
         <link rel="stylesheet" href="front_end/css/meanmenu.min.css">
 		<!-- font-awesome css -->
      
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-		<link rel="stylesheet" href="front_end/themify-icons.css">
-		<link rel="stylesheet" href="front_end/css/flaticon.css">
+		<link rel="stylesheet" href="{{asset('front_end/themify-icons.css')}}">
+		<link rel="stylesheet" href="{{asset('front_end/css/flaticon.css')}}">
 		<!-- venobox css -->
-		<link rel="stylesheet" href="front_end/css/venobox.css">
+		<link rel="stylesheet" href="{{asset('front_end/css/venobox.css')}}">
 		<!-- magnific css -->
-        <link rel="stylesheet" href="front_end/css/magnific.min.css">
+        <link rel="stylesheet" href="{{asset('front_end/css/magnific.min.css')}}">
 		<!-- style css -->
-		<link rel="stylesheet" href="front_end/style.css">
+		<link rel="stylesheet" href="{{asset('front_end/style.css')}}">
 		<!-- responsive css -->
         <link rel="stylesheet" href="front_end/css/responsive.css">
 		<!-- modernizr css -->
@@ -80,7 +80,7 @@
                         <div class="col-md-3 col-sm-3">
                             <div class="logo">
                                 <!-- Brand -->
-                                <a class="navbar-brand page-scroll black-logo" href="index.html">
+                                <a class="navbar-brand page-scroll black-logo" href="{{url('/')}}">
                                     <img src="front_end/img/logo/logo_eci.png" alt="">
                                 </a>
                             </div>
@@ -93,17 +93,15 @@
                                 <div class="collapse navbar-collapse" id="navbar-example">
                                     <div class="main-menu">
                                         <ul class="nav navbar-nav navbar-right">
-                                            <li><a href="index.html">Home</a></li>
+                                            <li><a href="{{url('/')}}">Home</a></li>
                                             <li><a class="pages" href="#">About</a>
 												<ul class="sub-menu">
-												    <li><a href="#">History</a></li>
-                                                    <li><a href="#">Mission & Vision</a></li>
-                                                    <li><a href="faq.html">Objective</a></li>
-													<li><a href="team.html">Team ECI</a></li>
-													<li><a href="review.html">Areas of Work</a></li>
+												    <li><a href="{{url('/about')}}" target="_blank">About Us</a></li>
+													<li><a href="{{url('/team')}}" target="_blank">Team ECI</a></li>
+                                                    <li><a href="#">Areas of Work</a></li>
+                                                    <li><a href="#">Policy & Advocacy</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Policy & Advocacy</a></li>
 											<li><a href="#">Projects</a></li>
 											<li><a href="#">Forum</a></li>
 											<li><a class="pages" href="#">Sectors</a>
@@ -114,7 +112,8 @@
 													<li><a href="blog-details.html">Environmental Export</a></li>
 												</ul>
 											</li>
-											<li><a href="contact.html">Report & Publication</a></li>
+                                            <li><a href="contact.html">Report & Publication</a></li>
+                                            <li><a href="{{url('/login')}}" type="button" class="btn btn-primary">Sign In</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -139,25 +138,25 @@
                                         <li><a href="index.html">Home</a></li>
                                         <li><a class="pages" href="#">About</a>
                                             <ul class="sub-menu">
-                                                <li><a href="#">History</a></li>
-                                                <li><a href="#">Mission & Vision</a></li>
-                                                <li><a href="faq.html">Objective</a></li>
-                                                <li><a href="team.html">Team ECI</a></li>
-                                                <li><a href="review.html">Areas of Work</a></li>
+                                                <li><a href="{{url('/about')}}" target="_blank">About Us</a></li>
+                                                <li><a href="{{url('/team')}}" target="_blank">Team ECI</a></li>
+                                                <li><a href="#">Areas of Work</a></li>
+                                                <li><a href="#">Policy & Advocacy</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">Policy & Advocacy</a></li>
+                                       
                                         <li><a href="#">Project</a></li>
                                         <li><a href="#">Forum</a></li>
                                         <li><a class="pages" href="#">Sectors</a>
                                             <ul class="sub-menu">
-                                                <li><a href="blog.html">Food & Agriculture</a></li>
-                                                <li><a href="blog-sidebar.html">Goods in Service</a></li>
-                                                <li><a href="blog-details.html">Trade in Service</a></li>
-                                                <li><a href="blog-details.html">Environmental Export</a></li>
+                                                <li><a href="#">Food & Agriculture</a></li>
+                                                <li><a href="#">Goods in Service</a></li>
+                                                <li><a href="#">Trade in Service</a></li>
+                                                <li><a href="#">Environmental Export</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="contact.html">Report & Publication</a></li>
+                                        <li><a href="#">Report & Publication</a></li>
+                                        <li><a href="#">Sign In</a></li>
                                     </ul>
                                 </nav>
                             </div>					

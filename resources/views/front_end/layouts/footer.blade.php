@@ -16,7 +16,7 @@
                                         {{ session()->get('success') }}  
                                         </div><br />
                                     @endif
-                                    <form action="{{route('subscriber.store')}}" method="POST">
+                                    <form action="" method="POST">
                                     @csrf
                                         <div class="subs-feilds">
                                             <div class="suscribe-input">
@@ -32,18 +32,17 @@
                         <div class="col-md-4 col-sm-3 col-xs-12">
                             <div class="footer-content">
                                 <div class="footer-head">
-                                    <h4>Services Link</h4>
+                                    <h4>Quick Link</h4>
                                     <ul class="footer-list">
-                                        <li><a href="#">Business</a></li>
-                                        <li><a href="#">Agency </a></li>
-                                        <li><a href="#">Social media</a></li>
-                                        <li><a href="#">Branding</a></li>
-                                        <li><a href="#">Design </a></li>
-                                        <li><a href="#">Data science </a></li>
+                                        <li><a href="https://www.bangladesh-bank.org/">Bangladesh Bank</a></li>
+                                        <li><a href="https://pmo.gov.bd/">Prime Ministers Office </a></li>
+                                        <li><a href="#">Board of Investment</a></li>
+                                        <li><a href="http://fbcci.org/fbcci/">FBCCI</a></li>
+                                        <li><a href="www.dcci.org.bd">DCCI </a></li>
                                     </ul>
                                     <ul class="footer-list hidden-sm">
-										<li><a href="#">Search engine</a></li>
-                                        <li><a href="#">Online support</a></li>
+										<li><a href="https://bangladesh.gov.bd/index.php">National Web Portal</a></li>
+                                        <li><a href="#">Global Money Week</a></li>
                                         <li><a href="#">Development</a></li>
                                         <li><a href="#">Pay per click</a></li>
                                         <li><a href="#">Event activation</a></li>
@@ -59,7 +58,7 @@
                                     <h4>Information</h4>
                                     <div class="footer-contacts">
                                         <p><span>Location :</span> 102/1 Shukrabd, Mirpur Road, Dhanmondi, Dhaka-1207, Bangladesh.</p>
-										<p><span>Tel :</span> +8802 9138234, 9136694, 9116774</p>
+										<p><span>Tel :</span> +8802 9138234, 9136694,</p>
 										<p><span>Email :</span> info@eci.org.bd</p>
 									</div> 
                                     <div class="footer-icons">
