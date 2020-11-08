@@ -159,6 +159,9 @@ input:focus, textarea:focus, select:focus {
 .partner{
     background:#CCD9EC;
 }
+.sdg:hover {
+    opacity: 0.4;
+}
 .browserupgrade {
     margin: 0.2em 0;
     background: #ccc;

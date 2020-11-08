@@ -6,11 +6,11 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="breadcrumb text-center">
                             <div class="section-headline white-headline text-center">
-                                <h3>Agriculturul Development</h3>
+                                <h3>Taxation</h3>
                             </div>
                             <ul>
                                 <li class="home-bread">Home</li>
-                                <li>Agriculturul Development/li>
+                                <li>Taxation</li>
                             </ul>
                         </div>
                     </div>
@@ -24,7 +24,7 @@
                <div class="row">
 					<div class="col-md-12 col-sm-12 col-xs-12">
 						<div class="section-headline text-center">
-							<h3>Agriculturul Development</h3>
+							<h3>Taxation</h3>
 							<p>ECI caters the needs of all stakeholders through providing required support services and harmonizes latest means</p>
 						</div>
 					</div>

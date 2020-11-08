@@ -17,10 +17,10 @@
             <div class="nav-tabs-custom">
                 <ul class="nav nav-tabs">
                     <li class="active">         
-                        <a aria-expanded="true" data-toggle="tab" href="#create-subject"><i class="fa fa-user-plus" aria-hidden="true"></i>Add Post</a>
+                        <a aria-expanded="true" data-toggle="tab" href="#create-subject"><i class="fa fa-user-plus" aria-hidden="true"></i>Add Sub Category</a>
                     </li>
                     <li>
-                        <a aria-expanded="false" data-toggle="tab" href="#subject-list"><i class="fa fa-users" aria-hidden="true"></i> Post List</a>
+                        <a aria-expanded="false" data-toggle="tab" href="#subject-list"><i class="fa fa-users" aria-hidden="true"></i> Sub Category List</a>
                     </li>
                 </ul>
                 <div class="tab-content">
@@ -33,54 +33,22 @@
                                     <h3 class="box-title"><?= @$heading; ?></h3>
                                 </div><!-- /.box-header -->
                                 <!-- form start -->
-                                <form method="post" action="{{route('post.store')}}" enctype="multipart/form-data">
+                                <form method="post" action="{{route('sub-category.store')}}">
                                     @csrf
-                                    <input type="hidden" name="user_id" value="{{Auth::user()->id}}"> 
                                     <div class="box-body">
                                         <div class="row">
                                             <div class="col-md-6">
-                                                <div class="form-group {{ $errors->has('full_name') ? 'has-error' : '' }}">
-                                                    <label for="page_id">Page</label> 
-                                                    <select name="page_id" id="page_id" class="form-control" required>
-                                                    @foreach($pages as $page)
-                                                        <option value="{{$page->id}}">{{$page->page_name}}</option>
-                                                    @endforeach
-                                                    </select>
+                                                <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
+                                                    <label for="name"> name </label> 
+                                                    <input type="text" name="name" id="name" class="form-control" required>
+                                                    {!! $errors->first('name','<span class="help-block">:message</span>') !!}
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
-                                                <div class="form-group {{ $errors->has('full_name') ? 'has-error' : '' }}">
-                                                    <label for="category_id">Category</label> 
-                                                    <select name="category_id" id="category_id" class="form-control" required>
-                                                    @foreach($categories as $category)
-                                                        <option value="{{$category->id}}">{{$category->category_name}}</option>
-                                                    @endforeach
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group {{ $errors->has('full_name') ? 'has-error' : '' }}">
-                                                    <label for="category_id">Category</label> 
-                                                    <select name="sub_category_id" id="sub_category_id" class="form-control" required>
-                                                    @foreach($sub_categories as $value)
-                                                        <option value="{{$value->id}}">{{$value->name}}</option>
-                                                    @endforeach
-                                                    </select>
-                                                </div>
-                                            </div>
-                                            
-                                            <div class="col-md-6">
-                                                <div class="form-group {{ $errors->has('department_id') ? 'has-error' : '' }}">
-                                                    <label for="title">Title</label> 
-                                                    <input type="text" name="title" id="title" class="form-control">
-                                                    {!! $errors->first('title','<span class="help-block">:message</span>') !!}
-                                                </div>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group {{ $errors->has('department_id') ? 'has-error' : '' }}">
-                                                    <label for="file">File</label> 
-                                                    <input type="file" name="file" id="file" class="form-control">
-                                                    {!! $errors->first('file','<span class="help-block">:message</span>') !!}
+                                                <div class="form-group {{ $errors->has('description') ? 'has-error' : '' }}">
+                                                    <label for="description">Description</label> 
+                                                    <input type="text" name="description" id="description" class="form-control">
+                                                    {!! $errors->first('description','<span class="help-block">:message</span>') !!}
                                                 </div>
                                             </div>
                                         </div>
@@ -100,6 +68,7 @@
                             <div class="box box-primary">
                                 <div class="box-header with-border">
                                 </div><!-- /.box-header -->
+
                                     <div class="box-body">
                                         <div class="form-group">    
                                             <label for="status">Status</label>                    
@@ -108,7 +77,8 @@
                                                 <option value="In-Active">In-Active</option>
                                             </select>
                                         </div>
-                                    </div>
+                                    </div><!-- /.box-body -->
+
                                 </form>
                             </div><!-- /.box -->
                             <!-- Form Element sizes -->
@@ -127,21 +97,18 @@
                                                 <thead>
                                                     <tr>
                                                         <th>#</th>
-                                                        <th>Title</th>
-                                                        <th>Page</th>
-                                                        <th>Category</th>
+                                                        <th> Name</th>
+                                                        <th>Description</th>
                                                         <th class="text-center">Status</th>
                                                     </tr>
                                                 </thead>
-
                                                 <tbody>
-                                                @foreach($posts as $key=>$post)
+                                                @foreach($sub_categories as $key=>$value)
                                                     <tr>
                                                         <td>{{++$key}}</td>
-                                                        <td><a href="/file/{{$post->file}}" target="_blank">{{$post->title}}</a></td>
-                                                        <td>{{$post->page->page_name}}</td>
-                                                        <td>{{$post->category->category_name}}</td>
-                                                        <td>{{$post->status}}</td>
+                                                        <td>{{$value->name}}</td>
+                                                        <td>{{$value->description}}</td>
+                                                        <td>{{$value->status}}</td>
                                                     </tr>
                                                 @endforeach
                                                 </tbody>

@@ -71,6 +71,9 @@
 <script>
 CKEDITOR.replace( 'post_description' );
 </script>
+<script>
+    CKEDITOR.replace( 'project_description' );
+</script>
 <script src="{{ asset('admin_assets/js/datatables/dataTables.bootstrap.min.js')}}"></script>
 <script src="{{ asset('admin_assets/js/datatables/dataTables.buttons.min.js')}}"></script>
 <script src="{{ asset('admin_assets/js/datatables/buttons.flash.min.js')}}"></script>

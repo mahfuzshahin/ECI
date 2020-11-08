@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Page;
 use App\Category;
+use App\SubCategory;
 use App\Post;
 class PostController extends Controller
 {
@@ -24,7 +25,8 @@ class PostController extends Controller
         $posts = Post::all();
         $pages = Page::where('status','Active')->get();
         $categories = Category::where('status','Active')->get();
-        return view('admin.post.index',compact('posts','pages','categories'));
+        $sub_categories = SubCategory::where('status','Active')->get();
+        return view('admin.post.index',compact('posts','pages','categories','sub_categories'));
     }
 
     /**
@@ -49,6 +51,7 @@ class PostController extends Controller
         $request->validate([
             'user_id'     =>  'required',
             'category_id'  =>  'required',
+            'sub_category_id'  =>  'required',
             'page_id'   =>  'required',
             'title'   =>  'required',
             'status'    =>  'required',
@@ -65,6 +68,7 @@ class PostController extends Controller
         $form_data = array(
             'user_id'         =>   $request->user_id,
             'category_id'      =>   $request->category_id,
+            'sub_category_id'      =>   $request->sub_category_id,
             'page_id'   =>   $request->page_id,
             'title'    =>   $request->title,
             'status'    =>   $request->status,

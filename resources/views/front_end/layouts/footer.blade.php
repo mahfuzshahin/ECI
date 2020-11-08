@@ -104,7 +104,7 @@
                             <div class="copyright">
                                 <p>
                                     Copyright © 2020
-                                    <a href="https://eci.org.bd/">ECI</a> All Rights Reserved
+                                    <a href="https://eci.org.bd/" target="_blank">ECI</a> All Rights Reserved
                                 </p>
                             </div>
                         </div>
@@ -116,30 +116,38 @@
         <!-- End Footer Area -->
 		
 		<!-- all js here -->
-
+        
 		<!-- jquery latest version -->
-		<script src="front_end/js/vendor/jquery-1.12.4.min.js"></script>
+		<script src="{{asset('front_end/js/vendor/jquery-1.12.4.min.js')}}"></script>
 		<!-- bootstrap js -->
-		<script src="front_end/js/bootstrap.min.js"></script>
+		<script src="{{asset('front_end/js/bootstrap.min.js')}}"></script>
 		<!-- owl.carousel js -->
-		<script src="front_end/js/owl.carousel.min.js"></script>
+		<script src="{{asset('front_end/js/owl.carousel.min.js')}}"></script>
 		<!-- Counter js -->
-		<script src="front_end/js/jquery.counterup.min.js"></script>
+		<script src="{{asset('front_end/js/jquery.counterup.min.js')}}"></script>
 		<!-- waypoint js -->
-		<script src="front_end/js/waypoints.js"></script>
+		<script src="{{asset('front_end/js/waypoints.js')}}"></script>
 		<!-- magnific js -->
-        <script src="front_end/js/magnific.min.js"></script>
+        <script src="{{asset('front_end/js/magnific.min.js')}}"></script>
         <!-- wow js -->
-        <script src="front_end/js/wow.min.js"></script>
+        <script src="{{asset('front_end/js/wow.min.js')}}"></script>
          <!-- venobox js -->
-        <script src="front_end/js/venobox.min.js"></script>
+        <script src="{{asset('front_end/js/venobox.min.js')}}"></script>
         <!-- meanmenu js -->
-        <script src="front_end/js/jquery.meanmenu.js"></script>
+        <script src="{{asset('front_end/js/jquery.meanmenu.js')}}"></script>
 		<!-- Form validator js -->
-		<script src="front_end/js/form-validator.min.js"></script>
+		<script src="{{asset('front_end/js/form-validator.min.js')}}"></script>
 		<!-- plugins js -->
-		<script src="front_end/js/plugins.js"></script>
+		<script src="{{asset('front_end/js/plugins.js')}}"></script>
 		<!-- main js -->
-		<script src="front_end/js/main.js"></script>
+		<script src="{{asset('front_end/js/main.js')}}"></script>
+		<script src="{{asset('admin_assets/js/datatables/jquery.dataTables.min.js')}}"></script>
+		<script src="{{asset('admin_assets/js/datatables/dataTables.bootstrap.min.js')}}"></script>
+
+        <script type="text/javascript">
+            $(document).ready( function () {
+                $('#example').DataTable();
+            });
+        </script>
 	</body>
 </html>

@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- favicon -->		
-		<link rel="shortcut icon" type="image/x-icon" href="front_end/img/logo/favicon.ico">
+		<link rel="shortcut icon" type="image/x-icon" href="{{asset('front_end/img/logo/favicon.ico')}}">
 
 		<!-- all css here -->
 
@@ -20,7 +20,7 @@
        <!-- Animate css -->
         <link rel="stylesheet" href="{{asset('front_end/css/animate.css')}}">
         <!-- meanmenu css -->
-        <link rel="stylesheet" href="front_end/css/meanmenu.min.css">
+        <link rel="stylesheet" href="{{asset('front_end/css/meanmenu.min.css')}}">
 		<!-- font-awesome css -->
      
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -32,10 +32,11 @@
         <link rel="stylesheet" href="{{asset('front_end/css/magnific.min.css')}}">
 		<!-- style css -->
 		<link rel="stylesheet" href="{{asset('front_end/style.css')}}">
+		<link rel="stylesheet" href="{{asset('admin_assets/css/dataTables.bootstrap.min.css')}}">
 		<!-- responsive css -->
-        <link rel="stylesheet" href="front_end/css/responsive.css">
+        <link rel="stylesheet" href="{{asset('front_end/css/responsive.css')}}">
 		<!-- modernizr css -->
-		<script src="front_end/js/vendor/modernizr-2.8.3.min.js"></script>
+		<script src="{{asset('front_end/js/vendor/modernizr-2.8.3.min.js')}}"></script>
 	</head>
 		<body>
 
@@ -102,18 +103,18 @@
                                                     <li><a href="#">Policy & Advocacy</a></li>
 												</ul>
 											</li>
-											<li><a href="#">Projects</a></li>
-											<li><a href="#">Forum</a></li>
-											<li><a class="pages" href="#">Sectors</a>
-												<ul class="sub-menu">
-													<li><a href="blog.html">Food & Agriculture</a></li>
-													<li><a href="blog-sidebar.html">Goods in Service</a></li>
-													<li><a href="blog-details.html">Trade in Service</a></li>
-													<li><a href="blog-details.html">Environmental Export</a></li>
-												</ul>
-											</li>
-                                            <li><a href="contact.html">Report & Publication</a></li>
-                                            <li><a href="{{url('/login')}}" type="button" class="btn btn-primary">Sign In</a></li>
+											<li><a href="{{url('/projects')}}">Project</a></li>
+                                            <li><a href="#">Forum</a></li>
+                                            <!-- <li><a class="pages" href="#">Sectors</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="#">Food & Agriculture</a></li>
+                                                    <li><a href="#">Goods in Service</a></li>
+                                                    <li><a href="#">Trade in Service</a></li>
+                                                    <li><a href="#">Environmental Export</a></li>
+                                                </ul>
+                                            </li> -->
+                                            <li><a href="{{url('/report-publication')}}">Report & Publication</a></li>
+                                            <li><a href="{{url('/login')}}">Sign In</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -145,18 +146,18 @@
                                             </ul>
                                         </li>
                                        
-                                        <li><a href="#">Project</a></li>
+                                        <li><a href="{{url('/projects')}}">Project</a></li>
                                         <li><a href="#">Forum</a></li>
-                                        <li><a class="pages" href="#">Sectors</a>
+                                        <!-- <li><a class="pages" href="#">Sectors</a>
                                             <ul class="sub-menu">
                                                 <li><a href="#">Food & Agriculture</a></li>
                                                 <li><a href="#">Goods in Service</a></li>
                                                 <li><a href="#">Trade in Service</a></li>
                                                 <li><a href="#">Environmental Export</a></li>
                                             </ul>
-                                        </li>
-                                        <li><a href="#">Report & Publication</a></li>
-                                        <li><a href="#">Sign In</a></li>
+                                        </li> -->
+                                        <li><a href="{{url('/report-publication')}}">Report & Publication</a></li>
+                                        <li><a href="{{url('/login')}}">Sign In</a></li>
                                     </ul>
                                 </nav>
                             </div>					

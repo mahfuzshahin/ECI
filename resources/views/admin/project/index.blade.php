@@ -1,7 +1,18 @@
 @extends('admin.layouts.app-template')
-@section('title', 'ECI')
+
+
+{{--  Page Title [ Important ]  --}}
+@section('title', 'Welcome to Dashboard')
+
+
+<!-- Flash Message [ Optional ]  -->
+@section('flash-message')
+@stop
+
+
+<!-- Page Content -->
 @section('content')
-  <div class="row">
+<div class="row">
         <!-- left column -->
         <div class="col-md-12">
             <h4>                         
@@ -17,10 +28,10 @@
             <div class="nav-tabs-custom">
                 <ul class="nav nav-tabs">
                     <li class="active">         
-                        <a aria-expanded="true" data-toggle="tab" href="#create-subject"><i class="fa fa-user-plus" aria-hidden="true"></i>Add Category</a>
+                        <a aria-expanded="true" data-toggle="tab" href="#create-subject"><i class="fa fa-user-plus" aria-hidden="true"></i> Add Project</a>
                     </li>
                     <li>
-                        <a aria-expanded="false" data-toggle="tab" href="#subject-list"><i class="fa fa-users" aria-hidden="true"></i> Category List</a>
+                        <a aria-expanded="false" data-toggle="tab" href="#subject-list"><i class="fa fa-users" aria-hidden="true"></i> Project Lists</a>
                     </li>
                 </ul>
                 <div class="tab-content">
@@ -33,22 +44,24 @@
                                     <h3 class="box-title"><?= @$heading; ?></h3>
                                 </div><!-- /.box-header -->
                                 <!-- form start -->
-                                <form method="post" action="{{route('category.store')}}">
-                                    @csrf
+                                <form action="{{route('project.store')}}" method="POST">
+                                    
+                                    {{ csrf_field() }}
                                     <div class="box-body">
                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group {{ $errors->has('full_name') ? 'has-error' : '' }}">
-                                                    <label for="category_name">Category name </label> 
-                                                    <input type="text" name="category_name" id="category_name" class="form-control" required>
-                                                    {!! $errors->first('category_name','<span class="help-block">:message</span>') !!}
+                                            
+                                            <div class="col-md-12">
+                                                <div class="form-group {{ $errors->has('Title') ? 'has-error' : '' }}">
+                                                    <label for="name">Title</label> 
+                                                    <input type="text" name="title" id="title" class="form-control" value="{{ old('title') }}">
+                                                    {!! $errors->first('title','<span class="help-block">:message</span>') !!}
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group {{ $errors->has('department_id') ? 'has-error' : '' }}">
-                                                    <label for="description">Description</label> 
-                                                    <input type="text" name="description" id="description" class="form-control">
-                                                    {!! $errors->first('description','<span class="help-block">:message</span>') !!}
+                                        
+                                            <div class="col-md-12">
+                                                <div class="form-group {{ $errors->has('description') ? 'has-error' : '' }}">
+                                                    <label for="project_description">Description</label> 
+                                                    <textarea class="form-control" id="project_description" name="description"></textarea>
                                                 </div>
                                             </div>
                                         </div>
@@ -71,10 +84,10 @@
 
                                     <div class="box-body">
                                         <div class="form-group">    
-                                            <label for="status">Status</label>                    
+                                            <label for="status">Select Status</label>                    
                                             <select name="status" id="status" class="form-control">
-                                                <option value="Active">Active</option>
-                                                <option value="In-Active">In-Active</option>
+                                                <option value="1">Active</option>
+                                                <option value="2">Inactive</option>
                                             </select>
                                         </div>
                                     </div><!-- /.box-body -->
@@ -84,7 +97,9 @@
                             <!-- Form Element sizes -->
                         </div>
                     </div>
+
                     </div>
+                    
                     <div class="tab-pane" id="subject-list">
                         <div class="row">
                                 <div class="col-xs-12">
@@ -96,33 +111,59 @@
                                             <table class="table table-bordered table-striped" id="example2">
                                                 <thead>
                                                     <tr>
-                                                        <th>#</th>
-                                                        <th>Category Name</th>
-                                                        <th>Description</th>
+                                                        <th>Department Name</th>
+                                                        <th>Short Name</th>
+                                                        <th>Faculty Name</th>
                                                         <th class="text-center">Status</th>
+                                                        <th class="text-center">Action</th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                @foreach($categories as $key=>$category)
-                                                    <tr>
-                                                        <td>{{++$key}}</td>
-                                                        <td>{{$category->category_name}}</td>
-                                                        <td>{{$category->description}}</td>
-                                                        <td>{{$category->status}}</td>
-                                                    </tr>
-                                                @endforeach
+
+                                                
                                                 </tbody>
                                             </table>
                                         </div><!-- /.box-body -->
                                     </div><!-- /.box -->
                                 </div><!-- /.col -->
                             </div><!-- /.row -->
-                        </div>
-                    </div>
+                    </div><!-- /.tab-pane -->
                 </div><!-- /.tab-content -->
             </div><!-- nav-tabs-custom -->
         </div><!-- left column -->
     </div>
 
-@endsection
-    
+@stop
+
+<!-- Page Modal -->
+@section('modals')
+@stop
+
+@push('styles')
+      <style>
+      .small-box > .small-box-footer {
+            position: relative;
+            text-align: center;
+            padding: 15px 0;
+            color: #fff;
+            color: rgba(255, 255, 255, 0.8);
+            display: block;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+        }
+
+        .small-box .icon {
+            -webkit-transition: all 0.3s linear;
+            -o-transition: all 0.3s linear;
+            transition: all 0.3s linear;
+            position: absolute;
+            top: 4px;
+            right: 10px;
+            z-index: 0;
+            font-size: 70px;
+            color: rgba(0, 0, 0, 0.15);
+        }
+
+      </style>
+@endpush

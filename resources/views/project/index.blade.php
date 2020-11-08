@@ -6,11 +6,11 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="breadcrumb text-center">
                             <div class="section-headline white-headline text-center">
-                                <h3>Agriculturul Development</h3>
+                                <h3>Project</h3>
                             </div>
                             <ul>
                                 <li class="home-bread">Home</li>
-                                <li>Agriculturul Development/li>
+                                <li>Project</li>
                             </ul>
                         </div>
                     </div>
@@ -24,7 +24,7 @@
                <div class="row">
 					<div class="col-md-12 col-sm-12 col-xs-12">
 						<div class="section-headline text-center">
-							<h3>Agriculturul Development</h3>
+							<h3>Project</h3>
 							<p>ECI caters the needs of all stakeholders through providing required support services and harmonizes latest means</p>
 						</div>
 					</div>
@@ -33,17 +33,15 @@
                 <table class="table table-bordered table-striped" id="example">
                     <thead>
                         <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Name</th>
-                        <th scope="col">Category</th>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
                         </tr>
                     </thead>
                     <tbody>
-                    @foreach($posts as $key=>$post)
+                    @foreach($projects as $key=>$value)
                         <tr>
-                        <th scope="row">{{++$key}}</th>
-                        <td><a href="/file/{{$post->file}}" target="_blank">{{$post->title}}</a></td>
-                        <td>{{$post->sub_category->name}}</td>
+                            <td scope="row">{{++$key}}</td>
+                            <td>{{$value->title}}</td>>
                         </tr>
                     @endforeach
                     </tbody>

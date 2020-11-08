@@ -34,6 +34,7 @@
               <ul class="treeview-menu">
                 <li><a href="{{url('admin/page')}}"><i class="fa fa-long-arrow-right"></i> Page</a></li>
                 <li><a href="{{url('admin/category')}}"><i class="fa fa-long-arrow-right"></i> Category</a></li>
+                <li><a href="{{url('admin/sub-category')}}"><i class="fa fa-long-arrow-right"></i> Sub Category</a></li>
               </ul>
         </li>
         <li class="treeview">

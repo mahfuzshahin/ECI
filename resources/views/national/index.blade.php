@@ -6,11 +6,11 @@
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="breadcrumb text-center">
                             <div class="section-headline white-headline text-center">
-                                <h3>Single Window for Development</h3>
+                                <h3>National</h3>
                             </div>
                             <ul>
                                 <li class="home-bread">Home</li>
-                                <li>Single Window for Development</li>
+                                <li>National</li>
                             </ul>
                         </div>
                     </div>
@@ -24,7 +24,7 @@
                <div class="row">
 					<div class="col-md-12 col-sm-12 col-xs-12">
 						<div class="section-headline text-center">
-							<h3>Single Window for Development (SW4D)</h3>
+							<h3>National</h3>
 							<p>ECI caters the needs of all stakeholders through providing required support services and harmonizes latest means</p>
 						</div>
 					</div>
@@ -41,7 +41,7 @@
 									<div class="service-content">
 										<h4>Agriculturul Development</h4>
 										<p>Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands.</p>
-                                        <a class="service-btn" href="{{url('/single-window/agriculturul_development')}}"><i class="ti-arrow-right"></i></a>
+                                        <a class="service-btn" href="{{url('/national/agriculturul_development')}}"><i class="ti-arrow-right"></i></a>
 									</div>
 								</div>
 							</div>
@@ -56,7 +56,7 @@
 									<div class="service-content">
 										<h4>Business, Trade & Investment</h4>
 										<p>Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands.</p>
-										<a class="service-btn" href="{{url('/single-window/business_tred')}}"><i class="ti-arrow-right"></i></a>
+										<a class="service-btn" href="{{url('/national/business_tred')}}"><i class="ti-arrow-right"></i></a>
 									</div>
 								</div>
 							</div>
@@ -71,7 +71,7 @@
 									<div class="service-content">
 										<h4>ICT Development</h4>
 										<p>Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, fgfdgfd fgdfgg afrsf free from the internal demands andfree from the internal demands </p>
-										<a class="service-btn" href="{{url('/single-window/ict_development')}}"><i class="ti-arrow-right"></i></a>
+										<a class="service-btn" href="{{url('/national/ict_development')}}"><i class="ti-arrow-right"></i></a>
 									</div>
 								</div>
 							</div>
@@ -86,7 +86,7 @@
 									<div class="service-content">
 										<h4>Science and Innovation</h4>
 										<p>Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands.</p>
-										<a class="service-btn" href="{{url('/single-window/science-innovation')}}"><i class="ti-arrow-right"></i></a>
+										<a class="service-btn" href="{{url('/national/science-innovation')}}"><i class="ti-arrow-right"></i></a>
 									</div>
 								</div>
 							</div>
@@ -102,7 +102,7 @@
 										<h4>SME Development</h4>
 										<p>Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands.
                                             </p>
-										<a class="service-btn" href="{{url('/single-window/sme-development')}}"><i class="ti-arrow-right"></i></a>
+										<a class="service-btn" href="{{url('/national/sme-development')}}"><i class="ti-arrow-right"></i></a>
 									</div>
 								</div>
 							</div>
@@ -118,7 +118,7 @@
 										<h4>Taxation</h4>
 										<p>Aspernatur sit adipisci quaerat unde at neque Redug Lagre dolor sit amet consectetu. independent agency, free from the internal demands.
                                             </p>
-										<a class="service-btn" href="{{url('/single-window/taxation')}}"><i class="ti-arrow-right"></i></a>
+										<a class="service-btn" href="{{url('/national/taxation')}}"><i class="ti-arrow-right"></i></a>
 									</div>
 								</div>
 							</div>

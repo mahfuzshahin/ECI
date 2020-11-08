@@ -89,7 +89,7 @@
 									<div class="service-content">
 										<h4> Training & Development</h4>
 										<p>ECI conducts training and development for ensuring sustainable growth and focus diverse areas like Trade, Economy, Technology and so on.</p>
-										<a class="service-btn" href="#"><i class="ti-arrow-right"></i></a>
+										<a class="service-btn" href="{{url('/training-development')}}"><i class="ti-arrow-right"></i></a>
 									</div>
 								</div>
 							</div>
@@ -104,7 +104,7 @@
 									<div class="service-content">
 										<h4> Industry & Academia </h4>
 										<p>We are looking into the collaboration with renowned academic institutions to meet their demand and place our research to them for further tie-up.</p>
-										<a class="service-btn" href="#"><i class="ti-arrow-right"></i></a>
+										<a class="service-btn" href="{{url('/industry-academia')}}"><i class="ti-arrow-right"></i></a>
 									</div>
 								</div>
 							</div>
@@ -129,7 +129,7 @@
 									<div class="service-content">
 										<h4>Entrepreneurship Cafe</h4>
 										<p>Entrepreneurship development is instrumental for the growth of the economy of any country. ECI and Daffodil Family engaged working together on this domain.</p>
-										<a class="service-btn" href="#"><i class="ti-arrow-right"></i></a>
+										<a class="service-btn" href="{{url('/entrepreneurship-cafe')}}"><i class="ti-arrow-right"></i></a>
 									</div>
 								</div>
 							</div>
@@ -145,7 +145,7 @@
 										<h4>Webinar</h4>
 										<p>Observing the recent pandemic, ECI organizes its activities through series of webinars. In this process, we have been using diverse and robust platforms to make it interactive.
 </p>
-										<a class="service-btn" href="#"><i class="ti-arrow-right"></i></a>
+										<a class="service-btn" href="{{url('/webiner')}}"><i class="ti-arrow-right"></i></a>
 									</div>
 								</div>
 							</div>
@@ -159,10 +159,8 @@
 								<div class="service-inner">
 									<div class="service-content">
 										<h4>SDGs</h4>
-										<p>ECI belives that achiving SDGs will work as catalyst in new normal environment. We address those goals to align with our desired objectives.
-
-                                        </p>
-										<a class="service-btn" href="#"><i class="ti-arrow-right"></i></a>
+										<p>ECI belives that achiving SDGs will work as catalyst in new normal environment. We address those goals to align with our desired objectives. </p>
+										<a class="service-btn" href="https://www.undp.org/content/undp/en/home/sustainable-development-goals.html" target="_blank"><i class="ti-arrow-right"></i></a>
 									</div>
 								</div>
 							</div>
@@ -173,61 +171,6 @@
             </div>
         </div>
         <!-- End service area -->
-        <!-- Start Counter area -->
-        <div class="counter-area fix area-padding">
-            <div class="container">
-               <div class="row">
-                   <div class="col-md-6 col-sm-6 col-xs-12">
-                       <div class="counter-image">
-                            <div class="rotmate-image rotateme">
-                                <img src="img/about/circle.png" alt="">
-                            </div>
-                            <div class="top-img">
-                                <img src="front_end/img/about/self.png" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="fun-text-all">
-                            <!-- single counter  -->
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="fun_text wow fadeInUp" data-wow-delay="0.2s">
-                                   <span class="counter-icon"><i class="ti-layers"></i></span>
-                                    <span class="counter">510</span>
-                                    <h4>Total projects</h4>
-                                </div>
-                            </div>
-                            <!-- single counter  -->
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="fun_text wow fadeInUp" data-wow-delay="0.3s">
-                                   <span class="counter-icon"><i class="ti-world"></i></span>
-                                    <span class="counter">120</span>
-                                    <h4>Worldwide</h4>
-                                </div>
-                            </div>
-                           <!-- single counter  -->
-                            <!-- <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="fun_text wow fadeInUp" data-wow-delay="0.4s">
-                                    <span class="counter-icon"><i class="ti-cup"></i></span>
-                                    <span class="counter">40</span>
-                                    <h4>Awards win</h4>
-                                </div>
-                            </div> -->
-                            <!-- single counter  -->
-                            <div class="col-md-6 col-sm-6 col-xs-12">
-                                <div class="fun_text wow fadeInUp" data-wow-delay="0.5s">
-                                    <span class="counter-icon"><i class="ti-user"></i></span>
-                                    <span class="counter">210</span>
-                                    <h4>Team member</h4>
-                                </div>
-                            </div>
-                            <!-- single counter  -->
-                        </div>
-                    </div>
-                </div> 
-            </div>
-        </div>
-        <!-- End Counter area -->
 
         <!-- End Team Banner area -->
         <!-- Start project Area -->
